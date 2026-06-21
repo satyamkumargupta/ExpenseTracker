@@ -478,6 +478,106 @@ a { color: inherit; text-decoration: none; }
 .auth-switch a:hover { text-decoration: underline; }
 
 /* ------------------------------------------------------------------ */
+/* Legal pages                                                         */
+/* ------------------------------------------------------------------ */
+
+.legal-page {
+    padding: 4rem 2rem;
+    min-height: calc(100vh - 60px - 100px);
+}
+
+.legal-inner {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.legal-title {
+    font-family: var(--font-display);
+    font-size: clamp(2rem, 4vw, 3rem);
+    color: var(--ink);
+    margin-bottom: 0.5rem;
+}
+
+.legal-meta {
+    font-size: 0.9rem;
+    color: var(--ink-muted);
+    margin-bottom: 3rem;
+}
+
+.legal-content {
+    color: var(--ink);
+    line-height: 1.8;
+}
+
+.legal-content h2 {
+    font-family: var(--font-display);
+    font-size: 1.4rem;
+    color: var(--ink);
+    margin-top: 2.5rem;
+    margin-bottom: 1rem;
+}
+
+.legal-content h2:first-child {
+    margin-top: 0;
+}
+
+.legal-content p {
+    margin-bottom: 1.25rem;
+    color: var(--ink-muted);
+}
+
+.legal-content ul {
+    margin: 1rem 0 1.5rem 2rem;
+    list-style-type: disc;
+}
+
+.legal-content li {
+    margin-bottom: 0.75rem;
+    color: var(--ink-muted);
+}
+
+.legal-content a {
+    color: var(--accent);
+    font-weight: 500;
+    text-decoration: none;
+    border-bottom: 1px solid var(--accent-light);
+    transition: border-color 0.2s;
+}
+
+.legal-content a:hover {
+    border-bottom-color: var(--accent);
+}
+
+.legal-footer {
+    background: var(--accent-light);
+    border-radius: var(--radius-md);
+    padding: 2rem;
+    margin-top: 3rem;
+    text-align: center;
+}
+
+.legal-footer p {
+    font-size: 0.95rem;
+    color: var(--accent);
+    margin: 0;
+}
+
+.footer-links {
+    margin-bottom: 1.5rem;
+    font-size: 0.85rem;
+}
+
+.footer-links a {
+    color: var(--ink-muted);
+    text-decoration: none;
+    transition: color 0.2s;
+}
+
+.footer-links a:hover {
+    color: var(--ink);
+}
+
+/* ------------------------------------------------------------------ */
 /* Footer                                                              */
 /* ------------------------------------------------------------------ */
 

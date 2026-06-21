@@ -30,10 +30,10 @@
     </main>
 
     <footer class="footer">
-
-         <!-- Add your content here -->
-    <a href="#">Terms and Conditions</a> |
-    <a href="#">Privacy Policy</a>
+        <div class="footer-links">
+            <a href="{{ url_for('terms') }}">Terms and Conditions</a> |
+            <a href="{{ url_for('privacy') }}">Privacy Policy</a>
+        </div>
         <div class="footer-inner">
             <span class="brand-icon">◈</span>
             <span class="footer-name">Spendly</span>

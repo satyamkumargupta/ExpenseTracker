@@ -102,4 +102,61 @@
     </div>
 </section>
 
+<!-- Video Modal -->
+<div id="videoModal" class="modal">
+    <div class="modal-content">
+        <button class="modal-close">&times;</button>
+        <div class="modal-body">
+            <iframe
+                id="videoFrame"
+                src=""
+                title="Spendly Demo"
+                frameborder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                allowfullscreen>
+            </iframe>
+        </div>
+    </div>
+</div>
+
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+    const modal = document.getElementById('videoModal');
+    const videoFrame = document.getElementById('videoFrame');
+    const closeBtn = document.querySelector('.modal-close');
+    const seeHowItWorksBtn = document.querySelector('a[class="btn-secondary"]');
+
+    const videoUrl = 'https://www.youtube.com/embed/dQw4w9WgXcQ';
+
+    // Open modal
+    seeHowItWorksBtn.addEventListener('click', function(e) {
+        e.preventDefault();
+        modal.classList.add('active');
+        videoFrame.src = videoUrl;
+    });
+
+    // Close modal
+    closeBtn.addEventListener('click', closeModal);
+
+    // Close modal when clicking outside
+    modal.addEventListener('click', function(e) {
+        if (e.target === modal) {
+            closeModal();
+        }
+    });
+
+    function closeModal() {
+        modal.classList.remove('active');
+        videoFrame.src = '';
+    }
+
+    // Optional: Close modal on Escape key
+    document.addEventListener('keydown', function(e) {
+        if (e.key === 'Escape' && modal.classList.contains('active')) {
+            closeModal();
+        }
+    });
+});
+</script>
+
 {% endblock %}
